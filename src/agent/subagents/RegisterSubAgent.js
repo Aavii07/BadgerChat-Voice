@@ -66,7 +66,7 @@ const createRegisterSubAgent = (end) => {
             return end({ msg: `You have been successfully registered and logged in! Welcome ${username}.`, emote: AIEmoteType.SUCCESS});
         } else if (resp.status === 400) {
             stage = "GET_USERNAME";
-            return end({ msg: "Your request must contain a username and a pin.", emote: AIEmoteType.ERROR});
+            return end({ msg: "Sorry, but your pin must entirely be a number.", emote: AIEmoteType.ERROR});
         } else if (resp.status === 409) {
             stage = "GET_USERNAME";
             return end({ msg: "The username is already taken. Please choose a different username.", emote: AIEmoteType.ERROR});

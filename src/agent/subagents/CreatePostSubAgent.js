@@ -65,7 +65,7 @@ const createPostSubAgent = (end) => {
             });
 
             if (resp.status === 200) {
-                return end({ msg: `All set! The post was successfully sent to ${chatroom}`, emote: AIEmoteType.SUCCESS});
+                return end({ msg: `All set! The post was successfully sent to ${chatroom}.`, emote: AIEmoteType.SUCCESS});
             } else if (resp.status === 400) {
                 stage = "GET_TITLE";
                 return end({ msg: "Your request must contain a title and contents.", emote: AIEmoteType.ERROR});
