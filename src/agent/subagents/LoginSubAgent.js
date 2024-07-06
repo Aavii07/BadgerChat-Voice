@@ -8,7 +8,7 @@ const createLoginSubAgent = (end) => {
 
     const handleInitialize = async () => {
         if (await isLoggedIn()) {
-            return "You are already logged in.";
+            return end("You are already logged in.");
         } else {
             stage = "GET_USERNAME";
             return "Got it, what is your username?";

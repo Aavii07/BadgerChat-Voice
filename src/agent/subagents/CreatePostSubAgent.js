@@ -10,7 +10,7 @@ const createPostSubAgent = (end) => {
 
     const handleInitialize = async (promptData) => {
         if (!(await isLoggedIn())) {
-            return "Try to log in first before making a post.";
+            return end("Try to log in first before making a post.");
         } else {
             chatroom = promptData.entities["chatrooms:chatrooms"]?.[0]?.value || null;
             if (chatroom) {

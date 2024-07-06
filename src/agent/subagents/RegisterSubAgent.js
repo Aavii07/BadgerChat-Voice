@@ -8,7 +8,7 @@ const createRegisterSubAgent = (end) => {
 
     const handleInitialize = async () => {
         if (await isLoggedIn()) {
-            return "Try to log out before registering for a new account.";
+            return end("Try to log out before registering for a new account.");
         } else{
             stage = "GET_USERNAME";
             return "What username are you planning on having?";
